@@ -13,5 +13,17 @@ class bamboo {
   }
 
   include tomcat
+
+  class { 'postgresql::globals': 
+    version => $pgver,
+    manage_package_repo => true,
+    encoding => 'UTF8'
+  }
+  class { 'postgresql::server': 
+  }
+  postgresql::server::db { "bamboo":
+    user => 'bamboo',
+    password => postgresql_password('bamboo', "ohmypostgres1")
+  }
   
 }

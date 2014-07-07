@@ -13,9 +13,6 @@ class bamboo {
   }
 
   class { 'tomcat':
-    tomcat_version => 7,
-    java_version   => '1.7',
-    platform       => 'x64'
   }
 
   class { 'postgresql::globals':

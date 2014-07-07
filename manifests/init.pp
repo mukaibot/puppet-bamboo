@@ -2,32 +2,31 @@
 class bamboo {
 
   user { 'bamboo':
-    ensure => present,
+    ensure     => present,
     managehome => true,
-    password => '$6$mFuIDZDa52$U8BZQEEt9qZcoZzZFcx0Wm1JzZro02VBm0Ih2usngmjM7yJtYlLXYBzKJJFcnznlS63qC955pVk7bishWB9J.0',
+    password   => '$6$mFuIDZDa52$U8BZQEEt9qZcoZzZFcx0Wm1JzZro02VBm0Ih2usngmjM7yJtYlLXYBzKJJFcnznlS63qC955pVk7bishWB9J.0',
   }
-  file { "/home/bamboo":
+  file { '/home/bamboo':
     ensure => directory,
     owner  => bamboo,
     group  => bamboo;
   }
 
   class { 'tomcat':
-    $tomcat_version => 7,
-    $java_version => '1.7',
-    $platform => 'x64'
+    tomcat_version => 7,
+    java_version   => '1.7',
+    platform       => 'x64'
   }
 
-  class { 'postgresql::globals': 
-    version => $pgver,
+  class { 'postgresql::globals':
+    version             => $common::pgver,
     manage_package_repo => true,
-    encoding => 'UTF8'
+    encoding            => 'UTF8'
   }
-  class { 'postgresql::server': 
+  class { 'postgresql::server':
   }
-  postgresql::server::db { "bamboo":
-    user => 'bamboo',
-    password => postgresql_password('bamboo', "ohmypostgres1")
+  postgresql::server::db { 'bamboo':
+    user     => 'bamboo',
+    password => postgresql_password('bamboo', 'ohmypostgres1')
   }
-  
 }

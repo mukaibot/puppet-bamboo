@@ -11,4 +11,9 @@ class bamboo::users($username='bamboo',$password='changeme') {
     owner  => $username,
     group  => $username;
   }
+  file { "/home/${username}/logs":
+    ensure => directory,
+    owner  => $username,
+    group  => $username;
+  }
 }

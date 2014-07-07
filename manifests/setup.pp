@@ -21,11 +21,11 @@ class bamboo::setup($version = '5.5.1', $home='/home/bamboo/bamboo-home') {
     creates => "/home/${user}/${packagename}",
     cwd     => "/home/${user}"
   } ->
-  exec { '/etc/init.d/bamboo':
+  file { '/etc/init.d/bamboo':
     ensure => link,
     target => "/home/${user}/${packagename}/bin/start-bamboo.sh"
   } ->
-  exec { '/etc/default/bamboo':
+  file { '/etc/default/bamboo':
     ensure  => present,
     content => "RUN_AS_USER=${user}
 BAMBOO_PID=/home/${user}/bamboo.pid

@@ -35,7 +35,7 @@ BAMBOO_LOG_FILE=/home/${user}/logs/bamboo.log",
 
   file { 'bamboo-home':
     ensure   => 'present',
-    require  => Exec['bamboo_tarball'],
+    require  => Exec['extract'],
     content  => "bamboo.home= /home/${user}",
     path     => "/home/${user}/${packagename}/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties"
   }

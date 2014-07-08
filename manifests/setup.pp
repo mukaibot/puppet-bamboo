@@ -19,7 +19,8 @@ class bamboo::setup($version = '5.5.1', $home='/home/bamboo/bamboo-home') {
   exec { 'extract':
     command => "/bin/tar xvzf ${tarball}",
     creates => "/home/${user}/${packagename}",
-    cwd     => "/home/${user}"
+    cwd     => "/home/${user}",
+    user    => $user,
   } ->
   file { '/etc/init.d/bamboo':
     ensure => link,

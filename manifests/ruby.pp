@@ -4,7 +4,8 @@ class bamboo::ruby($rubyver = '2.1.2') {
   class { 'rbenv': }
   rbenv::plugin { 'sstephenson/ruby-build': }
   rbenv::build { '2.1.2':
-    owner => hiera('bamboo::users::username', 'bamboo'),
-    group => hiera('bamboo::users::username', 'bamboo'),
+    owner  => hiera('bamboo::users::username', 'bamboo'),
+    group  => hiera('bamboo::users::username', 'bamboo'),
+    global => true
   }
 }

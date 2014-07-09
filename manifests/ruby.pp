@@ -4,7 +4,7 @@ class bamboo::ruby($rubyver = '2.1.2') {
   $user = hiera('bamboo::users::username', 'bamboo')
 
   class { 'rbenv':
-    install_dir => "/home/${user}",
+    install_dir => "/home/${user}/.rbenv",
     owner       => $user
   }
   rbenv::plugin { 'sstephenson/ruby-build': }
@@ -12,6 +12,6 @@ class bamboo::ruby($rubyver = '2.1.2') {
     owner       => $user,
     group       => $user,
     global      => true,
-    install_dir => "/home/${user}"
+    install_dir => "/home/${user}/.rbenv"
   }
 }

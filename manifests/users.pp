@@ -1,19 +1,19 @@
 # == Class Bamboo::Users
 # Configures the bamboo user account
-class bamboo::users($username='bamboo',$password='changeme') {
-  user { $username:
+class bamboo::users {
+  user { $bamboo::username:
     ensure     => present,
     managehome => true,
-    password   => $password,
+    password   => $bamboo::password,
   }
-  file { "/home/${username}":
+  file { "/home/${bamboo::username}":
     ensure => directory,
-    owner  => $username,
-    group  => $username;
+    owner  => $bamboo::username,
+    group  => $bamboo::username;
   }
-  file { "/home/${username}/logs":
+  file { "/home/${bamboo::username}/logs":
     ensure => directory,
-    owner  => $username,
-    group  => $username;
+    owner  => $bamboo::username,
+    group  => $bamboo::username;
   }
 }

@@ -1,12 +1,12 @@
 # == Class Bamboo::Setup
 # Downloads and installs Bamboo
-class bamboo::setup($version = '5.5.1', $home='/home/bamboo/bamboo-home') {
-  package { 'java-1.7.0-openjdk.x86_64':
+class bamboo::setup {
+  package { $bamboo::javapackage:
     ensure => present
   }
 
-  $user = hiera('bamboo::users::username', 'bamboo')
-  $packagename = "atlassian-bamboo-${version}"
+  $user = $bamboo::username
+  $packagename = "atlassian-bamboo-${bamboo::version}"
   $tarball = "${packagename}.tar.gz"
 
   exec { 'bamboo_tarball':
@@ -36,7 +36,7 @@ BAMBOO_LOG_FILE=/home/${user}/logs/bamboo.log",
   file { 'bamboo-home':
     ensure   => 'present',
     require  => Exec['extract'],
-    content  => "bamboo.home= ${home}",
+    content  => "bamboo.home= ${bamboo::home}",
     path     => "/home/${user}/${packagename}/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties"
   }
 

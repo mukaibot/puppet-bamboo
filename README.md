@@ -35,10 +35,53 @@ This module will install Bamboo 5.5 on your server. It also installs Postgres 9.
 ###Beginning with [Bamboo]  
 
 Download the module, and at a minimum, set the following parameters:
-* password
+* password (using mkpasswd -m sha-512)
 * pgpass
 
+Here's a complete example:
+
+  class { '::bamboo':
+    username    => 'bamboo',
+    password    => '$6$XZ3WAndARKKP9d$gv8gsLeoaaKuWD5pPF86V3Y8lb6OdhmEntFrpZeCf2NYX4pnRs5PrRdjcVOGVzeqrHLaZoUVKXNUEpjIr8rcP/',
+    javaver     => '7',
+    version     => '5.5.1',
+    home        => '/home/bamboo/data',
+    pgver       => '9.3',
+    dbname      => 'bamboo_db',
+    pguser      => 'bamboo',
+    pgpass      => 'password
+  }
+
 ##Reference
+###Class: bamboo
+This is the only class you should declare.
+####`username'
+The username for the bamboo user. Default is `bamboo`
+
+####`password`
+Password hash for the bamboo user. Use the mkpassword -m sha-512 command to set this. eg
+`$6$XZ3WAndARKKP9d$gv8gsLeoaaKuWD5pPF86V3Y8lb6OdhmEntFrpZeCf2NYX4pnRs5PrRdjcVOGVzeqrHLaZoUVKXNUEpjIr8rcP/`
+
+####`javaver`
+Version of the JDK to install. Default is `7` (at the time of writing, Bamboo 5.5 is not compatible with 8)
+
+####`version`
+Version of Bamboo to install. Default is `5.5.1`
+
+####`home`
+Path to the directory bamboo should use for data. Default is `/home/bamboo/bamboo-home`
+
+####`pgver`
+Version of Postgresql to install. Default is  `9.3`
+
+####`dbname`
+Name for the Bamboo database. Default is `bamboo`
+
+####`pguser`
+Name for the Postgresql user. Default is `bamboo`
+
+####`pgpass`
+Password for the Postgresql user. Default is `changeme`
 
 
 ##Limitations

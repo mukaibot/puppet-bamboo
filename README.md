@@ -4,10 +4,10 @@
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with [Bamboo]](#setup)
-    * [What [Bamboo] affects](#what-[modulename]-affects)
+3. [Setup - The basics of getting started with Bamboo](#setup)
+    * [What Bamboo affects](#what-[modulename]-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with [Bamboo]](#beginning-with-[Bamboo])
+    * [Beginning with Bamboo](#beginning-with-Bamboo)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -23,7 +23,7 @@ This module will install Bamboo 5.5 on your server. It also installs Postgres 9.
 
 ##Setup
 
-###What [Bamboo] affects
+###What Bamboo affects
 
 * Java JDK
 * Postgresql
@@ -32,14 +32,11 @@ This module will install Bamboo 5.5 on your server. It also installs Postgres 9.
 
  This module requires the Postgresql module. Also, don't define your bamboo user separately, use this module to do it.
  
-###Beginning with [Bamboo]  
+##Reference
+###Class: bamboo
+This is the only class you should declare. Here's an example:
 
-Download the module, and at a minimum, set the following parameters:
-* password (using mkpasswd -m sha-512)
-* pgpass
-
-Here's a complete example:
-
+```
   class { '::bamboo':
     username    => 'bamboo',
     password    => '$6$XZ3WAndARKKP9d$gv8gsLeoaaKuWD5pPF86V3Y8lb6OdhmEntFrpZeCf2NYX4pnRs5PrRdjcVOGVzeqrHLaZoUVKXNUEpjIr8rcP/',
@@ -51,11 +48,8 @@ Here's a complete example:
     pguser      => 'bamboo',
     pgpass      => 'password
   }
-
-##Reference
-###Class: bamboo
-This is the only class you should declare.
-####`username'
+```
+####`username`
 The username for the bamboo user. Default is `bamboo`
 
 ####`password`

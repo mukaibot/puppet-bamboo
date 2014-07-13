@@ -7,6 +7,7 @@ class bamboo::database {
     encoding            => 'UTF8'
   }
   class { 'postgresql::server': }
+  class { 'postgresql::server::contrib': }
   class { 'postgresql::lib::devel': }
   postgresql::server::db { $bamboo::dbname:
     user     => $bamboo::pguser,

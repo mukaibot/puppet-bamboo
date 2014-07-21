@@ -41,12 +41,14 @@ start() {
   touch $PIDFILE
   chown $user $logfile
   chown $user $PIDFILE
+  echo "Starting Bamboo"
   start-stop-daemon -c $user --start --quiet --pidfile $PIDFILE --exec $DAEMON $DAEMON_ARGS > /dev/null || return 1
 }
 
 stop() {
+  echo "Stopping Bamboo"
   rm $LOCKFILE
-  su -l $user -c "$bamboo_dir/bin/catalina.sh stop"
+  su -l $user -c "$bamboo_dir/bin/catalina.sh stop" > /dev/null
   rm $PIDFILE
 }
 

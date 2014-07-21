@@ -36,15 +36,11 @@ start() {
     chown $user $piddir
   fi
 
-  if [ ! -e $PIDFILE ] 
-  then
-	  touch $LOCKFILE
-    touch $logfile
-    chown $user $logfile
-    #daemon --user $user --PIDFILE $PIDFILE "$bamboo_dir/bin/catalina.sh start"
-    start-stop-daemon -c $user --start --quiet --PIDFILE $PIDFILE --exec $DAEMON --test > /dev/null \
-      || return 1
-  fi
+  touch $LOCKFILE
+  touch $logfile
+  chown $user $logfile
+  chown $user $PIDFILE
+  start-stop-daemon -c $user --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1
 }
 
 stop() {
@@ -54,7 +50,7 @@ stop() {
 }
 
 status() {
-  if [ -e $LOCKFILE && -e $PIDFILE ]
+  if [ -e $LOCKFILE ] && [ -e $PIDFILE ]
   then
     $pid = `cat $PIDFILE`
     echo "Bamboo is running with pid $pid"

@@ -26,7 +26,8 @@ class bamboo::setup {
 
   file { '/etc/init.d/bamboo':
     ensure  => present,
-    content => template("bamboo/bamboo.${::osfamily}.init.erb")
+    content => template("bamboo/bamboo.${::osfamily}.init.erb"),
+    mode    => '0755'
   }
 
   file { 'bamboo-home':

@@ -64,7 +64,7 @@ stop() {
 status() {
   if [ -e $lockfile && -e $pidfile ]
   then
-    $pid = `cat $pidfile`
+    pid=`cat $pidfile`
     echo "Bamboo is running with pid $pid"
   fi
 }

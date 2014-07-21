@@ -38,9 +38,10 @@ start() {
 
   touch $LOCKFILE
   touch $logfile
+  touch $PIDFILE
   chown $user $logfile
   chown $user $PIDFILE
-  start-stop-daemon -c $user --start --quiet --pidfile $PIDFILE --exec $DAEMON --test > /dev/null || return 1
+  start-stop-daemon -c $user --start --quiet --pidfile $PIDFILE --exec $DAEMON $DAEMON_ARGS > /dev/null || return 1
 }
 
 stop() {

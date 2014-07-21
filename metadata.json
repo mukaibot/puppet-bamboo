@@ -1,0 +1,35 @@
+{
+  "name": "mukaibot-bamboo",
+  "version": "1.1.0",
+  "author": "Timothy Mukaibo",
+  "summary": "Downloads and installs Bamboo 5.5 with a Postgres backend",
+  "license": "ASL 2.0",
+  "source": "https://bitbucket.org/mukaibot/ds_bamboo/src",
+  "description": "Install Bamboo 5.5",
+  "project_page": "https://bitbucket.org/mukaibot/ds_bamboo",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystem_release": [
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Centos",
+      "operatingsystem_release": [
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystem_release": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs/postgresql"}
+  ]
+}

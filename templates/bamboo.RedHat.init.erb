@@ -66,6 +66,8 @@ status() {
   then
     pid=`cat $pidfile`
     echo "Bamboo is running with pid $pid"
+  else
+    echo "Bamboo is stopped"
   fi
 }
 

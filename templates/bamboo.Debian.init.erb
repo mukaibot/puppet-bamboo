@@ -36,6 +36,11 @@ start() {
     chown $user $piddir
   fi
 
+  if [ -e '/etc/default/bamboo' ]
+  then
+    source /etc/default/bamboo
+  fi
+
   touch $LOCKFILE
   touch $logfile
   touch $PIDFILE

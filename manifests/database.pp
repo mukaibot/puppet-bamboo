@@ -1,16 +1,10 @@
-# == Class Bamboo::Database
-# Installs and configures Postgres for Bamboo
-class bamboo::database {
-  class { 'postgresql::globals':
-    version             => $bamboo::pgver,
-    manage_package_repo => true,
-    encoding            => 'UTF8'
+class bamboo::database inherits bamboo {
+  
+  if $caller_module_name != $module_name {
+    fail("Use of private class ${name} by ${caller_module_name}")
   }
-  class { 'postgresql::server': }
-  class { 'postgresql::server::contrib': }
-  class { 'postgresql::lib::devel': }
-  postgresql::server::db { $bamboo::dbname:
-    user     => $bamboo::pguser,
-    password => postgresql_password($bamboo::pguser, $bamboo::pgpass)
+
+  if $db_manage == true {
+    class { "::bamboo::database::${db_type}": }
   }
 }

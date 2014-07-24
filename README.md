@@ -82,6 +82,15 @@ This module has only been tested on Centos 6.5, but it should be ok with Ubuntu 
 
 At the moment, this module will not setup any additional Bamboo addons. I hope to add this functionality in the future!
 
+## Todo list:
+
+* spec tests
+* acceptance tests
+* mysql support
+* Add variable validation
+* add class documentation
+* add example wrapper class
+
 ##Development
 
 Pull requests are welcome. Please use a feature branch.

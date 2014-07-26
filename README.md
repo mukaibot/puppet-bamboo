@@ -160,18 +160,17 @@ The name of the bamboo service.
 
 ##Limitations
 
-This module has only been tested on Centos 6.5, but it should be ok with Ubuntu too.
-
-At the moment, this module will not setup any additional Bamboo addons. I hope to add this functionality in the future!
+This module has only been tested on Centos 6.5, but it should be ok with Ubuntu/Debian too.
 
 ## Todo list:
 
-* spec tests
-* acceptance tests
-* mysql support
+* Add a ton more spec tests
+* Add acceptance tests
+* Add mysql support
 * Add variable validation
-* add class documentation
-* add example wrapper class
+* Add class documentation
+* Add example wrapper class in the documentation
+* Add code to install Bamboo addons.
 
 ##Development
 

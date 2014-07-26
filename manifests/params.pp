@@ -39,7 +39,7 @@ class bamboo::params {
   }
 
   case $::osfamily {
-    /RedHat|Debian/: { }
-    default: { fail("Error: ${::osfamily} is not supported yet") }
+    /^(RedHat|Debian)$/ : { }
+    default             : { fail("Error: ${::osfamily} is not supported yet") }
   }
 }

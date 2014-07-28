@@ -15,8 +15,8 @@ LOCKFILE=/var/lock/bamboo
 piddir=/var/spool/bamboo/pid
 PIDFILE=$piddir/bamboo.pid
 logfile=/var/log/bamboo
-bamboo_dir=<%= @bamboo_dir %>
-user=<%= @user %>
+bamboo_dir=<%= @bamboo_home %>/current
+user=<%= @username %>
 DAEMON="$bamboo_dir/bin/catalina.sh"
 DAEMON_ARGS="start"
 

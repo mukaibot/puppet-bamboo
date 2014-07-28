@@ -1,0 +1,12 @@
+fixtures:
+  repositories:
+    "stdlib":  "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+    "staging": "git://github.com/nanliu/puppet-staging.git"
+    "java": "git://github.com/puppetlabs/puppetlabs-java.git"
+    "postgresql": "git://github.com/puppetlabs/puppetlabs-postgresql.git"
+    "firewall": "git://github.com/puppetlabs/puppetlabs-firewall.git"
+    "apt": "git://github.com/puppetlabs/puppetlabs-apt.git"
+    "concat": "git://github.com/puppetlabs/puppetlabs-concat.git"
+
+  symlinks:
+    "bamboo": "#{source_dir}"

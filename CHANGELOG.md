@@ -1,10 +1,14 @@
+2014-08-27 16:53:09 -0700 Adam Crews 
+
+	* Add variable validations and spec tests to support (HEAD, variable_valiation)
+
 2014-07-28 07:39:13 -0700 Adam Crews 
 
-	* Updated .fixtures to use forge modules. (HEAD, variable_valiation)
+	* Updated .fixtures to use forge modules.
 
 2014-07-26 10:39:38 -0700 Adam Crews 
 
-	* Added some spec tests (origin/refactor, refactor_old, refactor)
+	* Added some spec tests (origin/refactor)
 
 2014-07-25 23:29:49 -0700 Adam Crews 
 

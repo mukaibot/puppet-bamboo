@@ -172,6 +172,15 @@ This module has only been tested on Centos 6.5, but it should be ok with Ubuntu/
 * Add example wrapper class in the documentation
 * Add code to install Bamboo addons.
 
+##Testing
+
+```shell
+bundle rake install
+bundle rake spec
+  or
+bundle rake spec_standalone
+```
+
 ##Development
 
 Pull requests are welcome. Please use a feature branch.

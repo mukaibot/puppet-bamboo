@@ -16,11 +16,11 @@
 
 ##Overview
 
-Installs Bamboo on a server, with a local Postgres instance. By default, you get Bamboo 5.5.1, Postgres 9.3 and Java 1.7.
+Installs Bamboo on a server, with a local Postgres instance. By default, you get Bamboo 5.6.1, Postgres 9.3 and Java 1.7.
 
 ##Module Description
 
-This module will install Bamboo 5.5 on your server. It also installs Postgres 9.3, and creates a database and user for you. Currently, it does not configure Bamboo to point to the database - you will need to do that yourself.
+This module will install Bamboo 5.6 on your server. It also installs Postgres 9.3, and creates a database and user for you. Currently, it does not configure Bamboo to point to the database - you will need to do that yourself.
 
 ##Setup
 
@@ -49,7 +49,7 @@ Do not define your bamboo user separately, use this module to do it.
 class { '::bamboo':
   username        => 'bamboo',
   pass_hash       => '$6$XZ3WAndARKKP9d$gv8gsLeoaaKuWD5pPF86V3Y8lb6OdhmEntFrpZeCf2NYX4pnRs5PrRdjcVOGVzeqrHLaZoUVKXNUEpjIr8rcP/',
-  bamboo_version  => '5.5.1',
+  bamboo_version  => '5.6.1',
   bamboo_home     => '/home/bamboo/data',
   bamboo_data     => '/var/bamboo/data',
   java_manage     => true,
@@ -92,7 +92,7 @@ Password hash for the bamboo user. Use the mkpassword -m sha-512 command to set 
 
 ####`bamboo_version`
 
-Version of Bamboo to install. Default is `5.5.1`
+Version of Bamboo to install. Default is `5.6.1`
 
 ####`bamboo_home`
 

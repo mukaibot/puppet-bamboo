@@ -1,4 +1,5 @@
 #Bamboo
+[![Build Status](https://travis-ci.org/mukaibot/puppet-bamboo.svg?branch=production)](https://travis-ci.org/mukaibot/puppet-bamboo)
 
 ####Table of Contents
 

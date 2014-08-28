@@ -31,6 +31,31 @@ class bamboo (
 
 ) inherits bamboo::params {
 
+  validate_string($username)
+  validate_string($pass_hash)
+  validate_absolute_path($bamboo_home)
+  validate_absolute_path($bamboo_data)
+  validate_re($bamboo_url, [ '^http://', '^https://', '^ftp://', '^puppet://' ], 'Error: \$bamboo_url supported protocols are [http|https|ftp|puppet]://')
+
+  validate_bool($db_manage)
+  validate_string($db_type)
+  validate_string($db_name)
+  validate_string($db_user)
+  validate_string($db_pass)
+  validate_string($db_version)
+  validate_bool($db_manage_repo)
+  validate_string($db_encoding)
+
+  validate_bool($java_manage)
+  validate_string($java_distribution)
+  validate_string($java_version)
+  validate_string($java_package)
+
+  validate_bool($service_manage)
+  validate_re($service_ensure, [ '^running', '^stopped'], "Error: \$service_ensure is ${service_ensure}; must be running or stopped.")
+  validate_bool($service_enable)
+  validate_string($service_name)
+
   anchor { '::bamboo::start': } ->
     class { '::bamboo::user': } ->
     class { '::bamboo::java': } ->

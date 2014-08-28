@@ -1,10 +1,18 @@
+2014-08-27 16:53:09 -0700 Adam Crews 
+
+	* Add variable validations and spec tests to support (HEAD, variable_valiation)
+
+2014-07-28 07:39:13 -0700 Adam Crews 
+
+	* Updated .fixtures to use forge modules.
+
 2014-07-26 10:39:38 -0700 Adam Crews 
 
-	* Added some spec tests (HEAD, refactor)
+	* Added some spec tests (origin/refactor)
 
 2014-07-25 23:29:49 -0700 Adam Crews 
 
-	* Updated readme (origin/refactor)
+	* Updated readme
 
 2014-07-24 11:17:06 -0700 Adam Crews 
 
@@ -12,7 +20,7 @@
 
 2014-07-23 08:57:01 +1000 Timothy Mukaibo 
 
-	* Source default variables if they exist (upstream/production, origin/production, origin/HEAD, production)
+	* Source default variables if they exist
 
 2014-07-23 07:14:57 +1000 Timothy Mukaibo 
 

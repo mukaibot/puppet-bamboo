@@ -1,12 +1,26 @@
 fixtures:
-  repositories:
-    "stdlib":  "git://github.com/puppetlabs/puppetlabs-stdlib.git"
-    "staging": "git://github.com/nanliu/puppet-staging.git"
-    "java": "git://github.com/puppetlabs/puppetlabs-java.git"
-    "postgresql": "git://github.com/puppetlabs/puppetlabs-postgresql.git"
-    "firewall": "git://github.com/puppetlabs/puppetlabs-firewall.git"
-    "apt": "git://github.com/puppetlabs/puppetlabs-apt.git"
-    "concat": "git://github.com/puppetlabs/puppetlabs-concat.git"
+  forge_modules:
+    stdlib:
+      repo: 'puppetlabs/stdlib'
+      ref: '4.1.0'
+    staging:
+      repo: 'nanliu/staging'
+      ref:  '0.4.1'
+    postgresql:
+      repo: 'puppetlabs/postgresql'
+      ref: '3.4.1'
+    java:
+      repo: 'puppetlabs/java'
+      ref: '1.1.1'
+    firewall:
+      repo: 'puppetlabs/firewall'
+      ref: '1.1.3'
+    apt:
+      repo: 'puppetlabs/apt'
+      ref: '1.5.2'
+    concat:
+      repo: 'puppetlabs/concat'
+      ref: '1.0.4'
 
   symlinks:
     "bamboo": "#{source_dir}"

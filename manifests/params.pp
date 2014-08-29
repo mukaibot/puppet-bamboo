@@ -26,9 +26,9 @@ class bamboo::params {
 
   case $db_type { 
     'postgresql': { 
-      $db_version = '9.3'
+      $db_version     = '9.3'
       $db_manage_repo = true
-      $db_encoding = 'UTF8'
+      $db_encoding    = 'UTF8'
     }
 
     'mysql': {

@@ -1,6 +1,10 @@
+2014-08-29 16:56:50 -0700 Adam Crews 
+
+	* Updates to travis config, added sane exclude matrix (HEAD, travis)
+
 2014-08-29 16:44:44 -0700 Adam Crews 
 
-	* Fix PG user bug (HEAD, bug_fixes)
+	* Fix PG user bug (origin/bug_fixes, bug_fixes)
 
 2014-08-29 16:37:23 -0700 Adam Crews 
 

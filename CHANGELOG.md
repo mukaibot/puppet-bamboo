@@ -1,6 +1,10 @@
+2014-08-29 16:44:44 -0700 Adam Crews 
+
+	* Fix PG user bug (HEAD, bug_fixes)
+
 2014-08-29 16:37:23 -0700 Adam Crews 
 
-	* Fix permissions on the tar deploy (HEAD, bug_fixes)
+	* Fix permissions on the tar deploy
 
 2014-08-28 11:05:54 +1000 Timothy Mukaibo 
 

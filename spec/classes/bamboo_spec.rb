@@ -63,7 +63,12 @@ describe 'bamboo' do
         it {should contain_class('postgresql::server') }
 
         it {should contain_class('bamboo::install') }
-        it {should contain_staging__deploy("bamboo-#{bamboo_version}.tar.gz") }
+        it do
+          should contain_staging__deploy("bamboo-#{bamboo_version}.tar.gz").with({
+            :user   => 'bamboo',
+            :group  => 'bamboo',
+          })
+        end 
         it do
           should contain_exec('make bamboo data dir').with({
             :command => /\/var\/atlassian\/application-data\/bamboo/,

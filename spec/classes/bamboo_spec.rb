@@ -60,7 +60,12 @@ describe 'bamboo' do
 
         it {should contain_class('bamboo::database') }
         it {should contain_class('bamboo::database::postgresql') }
+
         it {should contain_class('postgresql::server') }
+        it {should contain_postgresql__server__role('bamboo') }
+        it {should contain_postgresql__server__db('bamboo') }
+        it {should contain_postgresql__server__database('bamboo') }
+        it {should contain_postgresql__server__database_grant('GRANT bamboo - ALL - bamboo') }
 
         it {should contain_class('bamboo::install') }
         it do

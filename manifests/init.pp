@@ -13,7 +13,7 @@ class bamboo (
   $db_manage          = $bamboo::params::db_manage,
   $db_type            = $bamboo::params::db_type,
   $db_name            = $bamboo::params::db_name,
-  $db_user            = $bamboo::params::db_type,
+  $db_user            = $bamboo::params::db_user,
   $db_pass            = $bamboo::params::db_pass,
   $db_version         = $bamboo::params::db_version,
   $db_manage_repo     = $bamboo::params::db_manage_repo,

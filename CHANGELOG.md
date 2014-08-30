@@ -1,14 +1,42 @@
+2014-08-29 17:07:59 -0700 Adam Crews 
+
+	* Fix lint errors so travis is happy (HEAD, travis)
+
+2014-08-29 16:56:50 -0700 Adam Crews 
+
+	* Updates to travis config, added sane exclude matrix
+
+2014-08-29 16:44:44 -0700 Adam Crews 
+
+	* Fix PG user bug (origin/bug_fixes, bug_fixes)
+
+2014-08-29 16:37:23 -0700 Adam Crews 
+
+	* Fix permissions on the tar deploy
+
+2014-08-28 11:05:54 +1000 Timothy Mukaibo 
+
+	* Add build status to readme (origin/production, origin/HEAD, production)
+
+2014-08-28 10:40:04 +1000 Timothy Mukaibo 
+
+	* Add travis support
+
 2014-08-27 16:53:09 -0700 Adam Crews 
 
-	* Add variable validations and spec tests to support (HEAD, variable_valiation)
+	* Add variable validations and spec tests to support
 
 2014-07-28 07:39:13 -0700 Adam Crews 
 
 	* Updated .fixtures to use forge modules.
 
+2014-07-31 16:27:49 +1000 Timothy Mukaibo 
+
+	* Update version for release
+
 2014-07-26 10:39:38 -0700 Adam Crews 
 
-	* Added some spec tests (origin/refactor)
+	* Added some spec tests
 
 2014-07-25 23:29:49 -0700 Adam Crews 
 
@@ -28,7 +56,7 @@
 
 2014-07-22 08:07:16 +1000 Timothy Mukaibo 
 
-	* Replace Modulefile with metadat.json (tag: v1.1)
+	* Replace Modulefile with metadat.json
 
 2014-07-22 07:58:09 +1000 Timothy Mukaibo 
 
@@ -64,7 +92,7 @@
 
 2014-07-12 17:46:31 +1000 Timothy Mukaibo 
 
-	* Add modulefile (tag: v1.0)
+	* Add modulefile
 
 2014-07-12 17:39:24 +1000 Timothy Mukaibo 
 

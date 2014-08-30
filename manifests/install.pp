@@ -5,8 +5,10 @@ class bamboo::install inherits bamboo {
   }
 
   staging::deploy { "bamboo-${bamboo_version}.tar.gz":
-    source => "${bamboo_url}/atlassian-bamboo-${bamboo_version}.tar.gz",
-    target  => "${bamboo_home}",
+    source  => "${bamboo_url}/atlassian-bamboo-${bamboo_version}.tar.gz",
+    target  => $bamboo_home,
+    user    => $username,
+    group   => $username,
     creates => "${bamboo_home}/atlassian-bamboo-${bamboo_version}",
   }
 

@@ -24,8 +24,8 @@ class bamboo::params {
   $service_name       = 'bamboo'
 
 
-  case $db_type { 
-    'postgresql': { 
+  case $db_type {
+    'postgresql': {
       $db_version     = '9.3'
       $db_manage_repo = true
       $db_encoding    = 'UTF8'

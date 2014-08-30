@@ -9,7 +9,7 @@ class bamboo::user inherits bamboo {
   exec { 'Make home parent if needed':
     path    => [ '/bin', '/usr/bin' ],
     command => "mkdir -p ${home_parent}",
-    creates => "${home_parent}",
+    creates => $home_parent,
   }
 
   user { $username:

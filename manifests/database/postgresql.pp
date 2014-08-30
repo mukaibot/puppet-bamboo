@@ -27,9 +27,9 @@ class bamboo::database::postgresql inherits bamboo {
   postgresql::server::db { $db_name:
     user     => $db_user,
     password => postgresql_password($db_user, $db_pass)
-  } 
+  }
 
-  anchor { '::bamboo::database::end': 
+  anchor { '::bamboo::database::end':
     require => [
       Anchor['bamboo::database::start'],
       Class['postgresql::globals'],

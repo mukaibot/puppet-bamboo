@@ -1,6 +1,10 @@
+2014-08-29 17:07:59 -0700 Adam Crews 
+
+	* Fix lint errors so travis is happy (HEAD, travis)
+
 2014-08-29 16:56:50 -0700 Adam Crews 
 
-	* Updates to travis config, added sane exclude matrix (HEAD, travis)
+	* Updates to travis config, added sane exclude matrix
 
 2014-08-29 16:44:44 -0700 Adam Crews 
 

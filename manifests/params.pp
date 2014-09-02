@@ -2,7 +2,7 @@ class bamboo::params {
 
   $username           = 'bamboo'
   $pass_hash          = undef
-  $bamboo_version     = '5.5.1'
+  $bamboo_version     = '5.6.1'
   $bamboo_home        = '/opt/atlassian/bamboo'
   $bamboo_data        = '/var/atlassian/application-data/bamboo'
   $bamboo_url         = 'http://www.atlassian.com/software/bamboo/downloads/binary'

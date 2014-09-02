@@ -20,6 +20,7 @@ class bamboo::service inherits bamboo {
       hasstatus  => true,
       hasrestart => true,
       require    => File["/etc/init.d/${service_name}"],
+      subscribe  => File_line['Set bamboo data directory'],
     }
   }
 }

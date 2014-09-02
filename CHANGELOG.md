@@ -1,6 +1,10 @@
+2014-09-01 22:34:04 -0700 Adam Crews 
+
+	* Upgrade bamboo to 5.6.1 (HEAD, bamboo_upgrade)
+
 2014-08-29 17:07:59 -0700 Adam Crews 
 
-	* Fix lint errors so travis is happy (HEAD, travis)
+	* Fix lint errors so travis is happy (origin/travis, travis)
 
 2014-08-29 16:56:50 -0700 Adam Crews 
 

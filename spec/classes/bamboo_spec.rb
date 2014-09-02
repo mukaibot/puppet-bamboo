@@ -8,7 +8,7 @@ end
 describe 'bamboo' do
 
   # Update the bamboo version 
-  bamboo_version = '5.5.1'
+  bamboo_version = '5.6.1'
 
   ['RedHat', 'Debian' ].each do |osfamily|
 

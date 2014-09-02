@@ -1,12 +1,12 @@
 {
   "name": "mukaibot-bamboo",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "Timothy Mukaibo, Adam Crews",
-  "summary": "Downloads and installs Bamboo 5.5 with a Postgres backend",
+  "summary": "Downloads and installs Bamboo 5.x with a Postgres backend",
   "license": "ASL 2.0",
-  "source": "https://bitbucket.org/mukaibot/ds_bamboo/src",
-  "description": "Install Bamboo 5.5",
-  "project_page": "https://bitbucket.org/mukaibot/ds_bamboo",
+  "source": "https://github.com/mukaibot/puppet-bamboo",
+  "description": "Install Bamboo 5.x",
+  "project_page": "https://github.com/mukaibot/puppet-bamboo",
   "requirements": [
     {
       "name": "pe",

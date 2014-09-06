@@ -10,6 +10,7 @@ class bamboo::install inherits bamboo {
     user    => $username,
     group   => $username,
     creates => "${bamboo_home}/atlassian-bamboo-${bamboo_version}",
+    notify  => Service['bamboo'],
   }
 
   exec { 'make bamboo data dir':

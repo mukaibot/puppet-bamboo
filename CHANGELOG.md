@@ -1,3 +1,6 @@
+2014-10-01 16:33:01 +1000 Timothy Mukaibo
+  * Upgrade bamboo to 5.6.2
+
 2014-09-01 22:34:04 -0700 Adam Crews 
 
 	* Upgrade bamboo to 5.6.1 (HEAD, bamboo_upgrade)

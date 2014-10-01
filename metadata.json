@@ -1,6 +1,6 @@
 {
   "name": "mukaibot-bamboo",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": "Timothy Mukaibo, Adam Crews",
   "summary": "Downloads and installs Bamboo 5.x with a Postgres backend",
   "license": "ASL 2.0",

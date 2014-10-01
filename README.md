@@ -161,7 +161,7 @@ The name of the bamboo service.
 
 ##Limitations
 
-This module has only been tested on Centos 6.5, but it should be ok with Ubuntu/Debian too.
+This module can only install a Postgresql backend. The groundwork is there if you want a MySQL backend though - reach out and let us know!
 
 ## Todo list:
 

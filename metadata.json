@@ -38,7 +38,7 @@
       ]
     }
   ],
-  "issues_url": null,
+  "issues_url": "https://github.com/mukaibot/puppet-bamboo/issues",
   "dependencies": [
     {
       "name": "puppetlabs/postgresql",

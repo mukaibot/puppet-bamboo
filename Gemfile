@@ -5,9 +5,10 @@ group :development, :test do
   gem 'puppetlabs_spec_helper',  :require => false
   gem 'serverspec',              :require => false
   gem 'puppet-lint',             :require => false
+  gem 'hiera-puppet',            :require => false
   gem 'rspec', '< 2.99',         :require => false
   gem 'rspec-puppet-utils',      :require => false
-  gem 'rspec-puppet', 
+  gem 'rspec-puppet',
     :git => 'https://github.com/rodjek/rspec-puppet.git',
     :require => false
 end

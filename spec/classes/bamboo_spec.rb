@@ -7,14 +7,14 @@ end
 
 describe 'bamboo' do
 
-  # Update the bamboo version 
-  bamboo_version = '5.6.2'
+  # Update the bamboo version
+  bamboo_version = '5.7.0'
 
   ['RedHat', 'Debian' ].each do |osfamily|
 
     if osfamily == 'RedHat'
       [ 'RedHat', 'CentOS' ].each do |operatingsystem|
-        let(:facts) {{ 
+        let(:facts) {{
           :osfamily               => osfamily,
           :operatingsystem        => operatingsystem,
           :operatingsystemrelease => '6.5',
@@ -45,7 +45,7 @@ describe 'bamboo' do
           should contain_exec('Make home parent if needed').with({
             :command => /\/opt\/atlassian/,
             :creates => '/opt/atlassian',
-          }) 
+          })
         end
         it do
           should contain_file('/opt/atlassian/bamboo/logs').with({
@@ -73,7 +73,7 @@ describe 'bamboo' do
             :user   => 'bamboo',
             :group  => 'bamboo',
           })
-        end 
+        end
         it do
           should contain_exec('make bamboo data dir').with({
             :command => /\/var\/atlassian\/application-data\/bamboo/,
@@ -124,7 +124,7 @@ describe 'bamboo' do
       end
 
       describe "with db_manage == false" do
-        let(:params) {{ 
+        let(:params) {{
           :db_manage  => false,
           :db_type    => 'postgresql',
         }}

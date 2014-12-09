@@ -139,7 +139,7 @@ Specify to use the jdk, or jre.
 
 The version of java to install.  Default will use the system default.
 
-####`java_pacakge`
+####`java_package`
 
 Then name of the java package to install.
 

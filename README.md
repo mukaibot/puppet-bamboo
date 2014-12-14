@@ -139,7 +139,7 @@ Specify to use the jdk, or jre.
 
 The version of java to install.  Default will use the system default.
 
-####`java_pacakge`
+####`java_package`
 
 Then name of the java package to install.
 
@@ -155,7 +155,7 @@ Specify whether the service should be running or stopped.
 
 Specify whether the service should start at boot time.
 
-####`service_name
+####`service_name`
 
 The name of the bamboo service.
 
